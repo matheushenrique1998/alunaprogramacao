@@ -27,7 +27,7 @@ namespace medicas5
             Console.WriteLine("A médica é :" + media);
 
             if(media >= 7) {
-                Console.WriteLine("Aprovado");
+                Console.WriteLine("Aprovado!");
             }else{ 
                 Console.WriteLine("Reprovado");
             }
