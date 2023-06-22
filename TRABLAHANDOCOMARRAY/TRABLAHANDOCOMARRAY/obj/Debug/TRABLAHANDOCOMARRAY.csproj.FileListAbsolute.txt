@@ -1,0 +1,8 @@
+C:\Users\matheus.honascimento\source\repos\TRABLAHANDOCOMARRAY\TRABLAHANDOCOMARRAY\bin\Debug\TRABLAHANDOCOMARRAY.exe.config
+C:\Users\matheus.honascimento\source\repos\TRABLAHANDOCOMARRAY\TRABLAHANDOCOMARRAY\bin\Debug\TRABLAHANDOCOMARRAY.exe
+C:\Users\matheus.honascimento\source\repos\TRABLAHANDOCOMARRAY\TRABLAHANDOCOMARRAY\bin\Debug\TRABLAHANDOCOMARRAY.pdb
+C:\Users\matheus.honascimento\source\repos\TRABLAHANDOCOMARRAY\TRABLAHANDOCOMARRAY\obj\Debug\TRABLAHANDOCOMARRAY.csproj.AssemblyReference.cache
+C:\Users\matheus.honascimento\source\repos\TRABLAHANDOCOMARRAY\TRABLAHANDOCOMARRAY\obj\Debug\TRABLAHANDOCOMARRAY.csproj.SuggestedBindingRedirects.cache
+C:\Users\matheus.honascimento\source\repos\TRABLAHANDOCOMARRAY\TRABLAHANDOCOMARRAY\obj\Debug\TRABLAHANDOCOMARRAY.csproj.CoreCompileInputs.cache
+C:\Users\matheus.honascimento\source\repos\TRABLAHANDOCOMARRAY\TRABLAHANDOCOMARRAY\obj\Debug\TRABLAHANDOCOMARRAY.exe
+C:\Users\matheus.honascimento\source\repos\TRABLAHANDOCOMARRAY\TRABLAHANDOCOMARRAY\obj\Debug\TRABLAHANDOCOMARRAY.pdb

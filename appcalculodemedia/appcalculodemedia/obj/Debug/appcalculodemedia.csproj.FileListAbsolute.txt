@@ -3,9 +3,9 @@ C:\Users\matheus.honascimento\source\repos\appcalculodemedia\appcalculodemedia\b
 C:\Users\matheus.honascimento\source\repos\appcalculodemedia\appcalculodemedia\bin\Debug\appcalculodemedia.pdb
 C:\Users\matheus.honascimento\source\repos\appcalculodemedia\appcalculodemedia\obj\Debug\appcalculodemedia.csproj.AssemblyReference.cache
 C:\Users\matheus.honascimento\source\repos\appcalculodemedia\appcalculodemedia\obj\Debug\appcalculodemedia.csproj.SuggestedBindingRedirects.cache
-C:\Users\matheus.honascimento\source\repos\appcalculodemedia\appcalculodemedia\obj\Debug\appcalculodemedia.TxtNota1.resources
 C:\Users\matheus.honascimento\source\repos\appcalculodemedia\appcalculodemedia\obj\Debug\appcalculodemedia.Properties.Resources.resources
 C:\Users\matheus.honascimento\source\repos\appcalculodemedia\appcalculodemedia\obj\Debug\appcalculodemedia.csproj.GenerateResource.cache
 C:\Users\matheus.honascimento\source\repos\appcalculodemedia\appcalculodemedia\obj\Debug\appcalculodemedia.csproj.CoreCompileInputs.cache
 C:\Users\matheus.honascimento\source\repos\appcalculodemedia\appcalculodemedia\obj\Debug\appcalculodemedia.exe
 C:\Users\matheus.honascimento\source\repos\appcalculodemedia\appcalculodemedia\obj\Debug\appcalculodemedia.pdb
+C:\Users\matheus.honascimento\source\repos\appcalculodemedia\appcalculodemedia\obj\Debug\appcalculodemedia.frmmedia.resources

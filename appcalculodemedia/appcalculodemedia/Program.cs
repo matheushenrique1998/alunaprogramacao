@@ -16,7 +16,7 @@ namespace appcalculodemedia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TxtNota1());
+            Application.Run(new frmmedia());
         }
     }
 }
