@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DCBAFB1C-AE3C-4594-8EC7-381F8D7B526C}</ProjectGuid>
+    <ProjectGuid>{DE6F7D81-DF9F-491B-AD0D-910F498C4801}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>cpf</RootNamespace>
     <AssemblyName>cpf</AssemblyName>
@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="ProgramBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

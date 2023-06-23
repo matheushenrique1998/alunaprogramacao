@@ -1,8 +1,8 @@
-C:\Users\matheus.honascimento\source\repos\cpf\cpf\obj\Debug\cpf.csproj.AssemblyReference.cache
-C:\Users\matheus.honascimento\source\repos\cpf\cpf\obj\Debug\cpf.csproj.SuggestedBindingRedirects.cache
-C:\Users\matheus.honascimento\source\repos\cpf\cpf\obj\Debug\cpf.csproj.CoreCompileInputs.cache
 C:\Users\matheus.honascimento\source\repos\cpf\cpf\bin\Debug\cpf.exe.config
 C:\Users\matheus.honascimento\source\repos\cpf\cpf\bin\Debug\cpf.exe
 C:\Users\matheus.honascimento\source\repos\cpf\cpf\bin\Debug\cpf.pdb
+C:\Users\matheus.honascimento\source\repos\cpf\cpf\obj\Debug\cpf.csproj.AssemblyReference.cache
+C:\Users\matheus.honascimento\source\repos\cpf\cpf\obj\Debug\cpf.csproj.SuggestedBindingRedirects.cache
+C:\Users\matheus.honascimento\source\repos\cpf\cpf\obj\Debug\cpf.csproj.CoreCompileInputs.cache
 C:\Users\matheus.honascimento\source\repos\cpf\cpf\obj\Debug\cpf.exe
 C:\Users\matheus.honascimento\source\repos\cpf\cpf\obj\Debug\cpf.pdb
