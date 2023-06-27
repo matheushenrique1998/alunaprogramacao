@@ -1,7 +1,12 @@
 ﻿using System;
-class Program
-{
-    static bool validarCPF(string CPF)
+using System.Runtime.InteropServices;
+
+    
+
+
+    class program
+    {
+        static bool validarCPF(string CPF)
     {
         CPF = CPF.Replace(".", "").Replace(".", "");
         if (CPF.Length != 11 || TodosDigitosIguais(CPF))
