@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GERADORPCF", "GERADORPCF\GERADORPCF.csproj", "{AE14B1E2-C8CF-4003-984A-30DBF520E7DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE14B1E2-C8CF-4003-984A-30DBF520E7DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE14B1E2-C8CF-4003-984A-30DBF520E7DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE14B1E2-C8CF-4003-984A-30DBF520E7DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE14B1E2-C8CF-4003-984A-30DBF520E7DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43A3C7AC-855D-416F-ADE4-B4C6353E83C5}
+	EndGlobalSection
+EndGlobal
