@@ -1,0 +1,8 @@
+C:\Users\matheus.honascimento\source\repos\alortmosdiversoscsharp\alortmosdiversoscsharp\bin\Debug\alortmosdiversoscsharp.exe.config
+C:\Users\matheus.honascimento\source\repos\alortmosdiversoscsharp\alortmosdiversoscsharp\bin\Debug\alortmosdiversoscsharp.exe
+C:\Users\matheus.honascimento\source\repos\alortmosdiversoscsharp\alortmosdiversoscsharp\bin\Debug\alortmosdiversoscsharp.pdb
+C:\Users\matheus.honascimento\source\repos\alortmosdiversoscsharp\alortmosdiversoscsharp\obj\Debug\alortmosdiversoscsharp.csproj.AssemblyReference.cache
+C:\Users\matheus.honascimento\source\repos\alortmosdiversoscsharp\alortmosdiversoscsharp\obj\Debug\alortmosdiversoscsharp.csproj.SuggestedBindingRedirects.cache
+C:\Users\matheus.honascimento\source\repos\alortmosdiversoscsharp\alortmosdiversoscsharp\obj\Debug\alortmosdiversoscsharp.csproj.CoreCompileInputs.cache
+C:\Users\matheus.honascimento\source\repos\alortmosdiversoscsharp\alortmosdiversoscsharp\obj\Debug\alortmosdiversoscsharp.exe
+C:\Users\matheus.honascimento\source\repos\alortmosdiversoscsharp\alortmosdiversoscsharp\obj\Debug\alortmosdiversoscsharp.pdb
