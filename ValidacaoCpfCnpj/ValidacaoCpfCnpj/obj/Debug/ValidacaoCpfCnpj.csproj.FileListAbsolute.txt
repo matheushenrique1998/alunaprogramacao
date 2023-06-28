@@ -1,0 +1,11 @@
+C:\Users\matheus.honascimento\source\repos\ValidacaoCpfCnpj\ValidacaoCpfCnpj\obj\Debug\ValidacaoCpfCnpj.csproj.AssemblyReference.cache
+C:\Users\matheus.honascimento\source\repos\ValidacaoCpfCnpj\ValidacaoCpfCnpj\obj\Debug\ValidacaoCpfCnpj.csproj.SuggestedBindingRedirects.cache
+C:\Users\matheus.honascimento\source\repos\ValidacaoCpfCnpj\ValidacaoCpfCnpj\obj\Debug\ValidacaoCpfCnpj.ValidacaoCpfCnpj.resources
+C:\Users\matheus.honascimento\source\repos\ValidacaoCpfCnpj\ValidacaoCpfCnpj\obj\Debug\ValidacaoCpfCnpj.Properties.Resources.resources
+C:\Users\matheus.honascimento\source\repos\ValidacaoCpfCnpj\ValidacaoCpfCnpj\obj\Debug\ValidacaoCpfCnpj.csproj.GenerateResource.cache
+C:\Users\matheus.honascimento\source\repos\ValidacaoCpfCnpj\ValidacaoCpfCnpj\obj\Debug\ValidacaoCpfCnpj.csproj.CoreCompileInputs.cache
+C:\Users\matheus.honascimento\source\repos\ValidacaoCpfCnpj\ValidacaoCpfCnpj\bin\Debug\ValidacaoCpfCnpj.exe.config
+C:\Users\matheus.honascimento\source\repos\ValidacaoCpfCnpj\ValidacaoCpfCnpj\bin\Debug\ValidacaoCpfCnpj.exe
+C:\Users\matheus.honascimento\source\repos\ValidacaoCpfCnpj\ValidacaoCpfCnpj\bin\Debug\ValidacaoCpfCnpj.pdb
+C:\Users\matheus.honascimento\source\repos\ValidacaoCpfCnpj\ValidacaoCpfCnpj\obj\Debug\ValidacaoCpfCnpj.exe
+C:\Users\matheus.honascimento\source\repos\ValidacaoCpfCnpj\ValidacaoCpfCnpj\obj\Debug\ValidacaoCpfCnpj.pdb
