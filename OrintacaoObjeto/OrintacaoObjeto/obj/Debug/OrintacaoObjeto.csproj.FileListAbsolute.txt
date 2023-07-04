@@ -1,0 +1,8 @@
+C:\Users\matheus.honascimento\source\repos\OrintacaoObjeto\OrintacaoObjeto\bin\Debug\OrintacaoObjeto.exe.config
+C:\Users\matheus.honascimento\source\repos\OrintacaoObjeto\OrintacaoObjeto\bin\Debug\OrintacaoObjeto.exe
+C:\Users\matheus.honascimento\source\repos\OrintacaoObjeto\OrintacaoObjeto\bin\Debug\OrintacaoObjeto.pdb
+C:\Users\matheus.honascimento\source\repos\OrintacaoObjeto\OrintacaoObjeto\obj\Debug\OrintacaoObjeto.csproj.AssemblyReference.cache
+C:\Users\matheus.honascimento\source\repos\OrintacaoObjeto\OrintacaoObjeto\obj\Debug\OrintacaoObjeto.csproj.SuggestedBindingRedirects.cache
+C:\Users\matheus.honascimento\source\repos\OrintacaoObjeto\OrintacaoObjeto\obj\Debug\OrintacaoObjeto.csproj.CoreCompileInputs.cache
+C:\Users\matheus.honascimento\source\repos\OrintacaoObjeto\OrintacaoObjeto\obj\Debug\OrintacaoObjeto.exe
+C:\Users\matheus.honascimento\source\repos\OrintacaoObjeto\OrintacaoObjeto\obj\Debug\OrintacaoObjeto.pdb
