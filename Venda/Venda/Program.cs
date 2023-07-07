@@ -10,7 +10,6 @@ namespace Venda
     {
         static void Main(string[] args)
         {
-            
         }
     }
 }

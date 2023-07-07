@@ -8,10 +8,13 @@ namespace Venda
 {
     internal class Produto
     {
-        public Produto() { }
-        public Produto(Guid id) { }
-        public Guid Id { get; set; }
-        public string Pedido { get; set;
+        public string nome { get; set; }
+        public double Preco { get; set; }
+        public Produto(string nome = "0", double preco = 0.00)
+        {
+            nome = nome;
+            Preco = preco;
         }
+
     }
 }

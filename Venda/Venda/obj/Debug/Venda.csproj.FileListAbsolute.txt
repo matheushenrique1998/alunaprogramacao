@@ -1,0 +1,3 @@
+C:\Users\matheus.honascimento\source\repos\Venda\Venda\obj\Debug\Venda.csproj.AssemblyReference.cache
+C:\Users\matheus.honascimento\source\repos\Venda\Venda\obj\Debug\Venda.csproj.SuggestedBindingRedirects.cache
+C:\Users\matheus.honascimento\source\repos\Venda\Venda\obj\Debug\Venda.csproj.CoreCompileInputs.cache
