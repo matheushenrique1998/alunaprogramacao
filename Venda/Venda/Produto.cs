@@ -8,11 +8,10 @@ namespace Venda
 {
     internal class Produto
     {
-        public string nome { get; set; }
         public double Preco { get; set; }
-        public Produto(string nome = "0", double preco = 0.00)
+        public Produto( double preco = 0.00)
         {
-            nome = nome;
+          
             Preco = preco;
         }
 

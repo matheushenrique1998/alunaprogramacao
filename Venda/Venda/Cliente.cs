@@ -8,13 +8,32 @@ namespace Venda
 {
     internal class Cliente
     {
-        public int ID { get; set; }
-        public int idCliente { get; set; }
+        
+        public int IdCliente { get; set; }
 
         public string Produto { get; set; }
-        public Cliente ( string produto ="0"){
-            Produto = produto;
-}
+        private int quantidade { get; set; }
 
+
+        public Cliente ( string produto ="")
+        {
+            Produto = produto;        
+        }
+
+        public int Quantidade
+        {
+            get { return quantidade; }
+            set
+            {
+                if(value >= 0)
+                {
+                    quantidade = value;
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
     }
 }

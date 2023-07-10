@@ -1,3 +1,8 @@
 C:\Users\matheus.honascimento\source\repos\Venda\Venda\obj\Debug\Venda.csproj.AssemblyReference.cache
 C:\Users\matheus.honascimento\source\repos\Venda\Venda\obj\Debug\Venda.csproj.SuggestedBindingRedirects.cache
 C:\Users\matheus.honascimento\source\repos\Venda\Venda\obj\Debug\Venda.csproj.CoreCompileInputs.cache
+C:\Users\matheus.honascimento\source\repos\Venda\Venda\bin\Debug\Venda.exe.config
+C:\Users\matheus.honascimento\source\repos\Venda\Venda\bin\Debug\Venda.exe
+C:\Users\matheus.honascimento\source\repos\Venda\Venda\bin\Debug\Venda.pdb
+C:\Users\matheus.honascimento\source\repos\Venda\Venda\obj\Debug\Venda.exe
+C:\Users\matheus.honascimento\source\repos\Venda\Venda\obj\Debug\Venda.pdb
