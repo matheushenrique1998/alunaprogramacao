@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "login", "login\login.csproj", "{05C51594-A672-46EC-88F6-FB01DB2C771D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj", "{DE08F98A-A324-4E05-A2BF-0A9627947AEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{05C51594-A672-46EC-88F6-FB01DB2C771D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{05C51594-A672-46EC-88F6-FB01DB2C771D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{05C51594-A672-46EC-88F6-FB01DB2C771D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{05C51594-A672-46EC-88F6-FB01DB2C771D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE08F98A-A324-4E05-A2BF-0A9627947AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE08F98A-A324-4E05-A2BF-0A9627947AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE08F98A-A324-4E05-A2BF-0A9627947AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE08F98A-A324-4E05-A2BF-0A9627947AEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {52599E0A-174A-4F13-9F8C-B8569075E2FE}
+		SolutionGuid = {E80B1573-8D47-4D09-B55E-0CA49211A9F2}
 	EndGlobalSection
 EndGlobal

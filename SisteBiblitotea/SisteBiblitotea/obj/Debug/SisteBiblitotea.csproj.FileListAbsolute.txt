@@ -1,0 +1,11 @@
+C:\Users\matheus.honascimento\source\repos\SisteBiblitotea\SisteBiblitotea\bin\Debug\SisteBiblitotea.exe.config
+C:\Users\matheus.honascimento\source\repos\SisteBiblitotea\SisteBiblitotea\bin\Debug\SisteBiblitotea.exe
+C:\Users\matheus.honascimento\source\repos\SisteBiblitotea\SisteBiblitotea\bin\Debug\SisteBiblitotea.pdb
+C:\Users\matheus.honascimento\source\repos\SisteBiblitotea\SisteBiblitotea\obj\Debug\SisteBiblitotea.csproj.AssemblyReference.cache
+C:\Users\matheus.honascimento\source\repos\SisteBiblitotea\SisteBiblitotea\obj\Debug\SisteBiblitotea.csproj.SuggestedBindingRedirects.cache
+C:\Users\matheus.honascimento\source\repos\SisteBiblitotea\SisteBiblitotea\obj\Debug\SisteBiblitotea.FmCadastroAluno.resources
+C:\Users\matheus.honascimento\source\repos\SisteBiblitotea\SisteBiblitotea\obj\Debug\SisteBiblitotea.Properties.Resources.resources
+C:\Users\matheus.honascimento\source\repos\SisteBiblitotea\SisteBiblitotea\obj\Debug\SisteBiblitotea.csproj.GenerateResource.cache
+C:\Users\matheus.honascimento\source\repos\SisteBiblitotea\SisteBiblitotea\obj\Debug\SisteBiblitotea.csproj.CoreCompileInputs.cache
+C:\Users\matheus.honascimento\source\repos\SisteBiblitotea\SisteBiblitotea\obj\Debug\SisteBiblitotea.exe
+C:\Users\matheus.honascimento\source\repos\SisteBiblitotea\SisteBiblitotea\obj\Debug\SisteBiblitotea.pdb
