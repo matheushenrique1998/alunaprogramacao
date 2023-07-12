@@ -4,30 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrintacaoObjeto
+namespace Venda
 {
-    internal class Livro
+    internal class Produto
     {
-        public string nome;
-        
-        public double Preco;
-        public Livro( string nome= "", double preco = 0.0)
+        public double Preco { get; set; }
+        public Produto(double preco = 0.00)
         {
-            nome=nome
-            preco = preco;
 
-        }
-
-
-        public void ImprimirDetalhes()
-        {
-            Console.WriteLine("----");
-            Console.WriteLine("nome : {0}", nome);
-           
-          Console.WriteLine("Preço : {0:C}", Preco);
-            Console.WriteLine("----");
-
-
+            Preco = preco;
         }
 
     }

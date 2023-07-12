@@ -1,48 +1,30 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace alortmosdiversoscsharp
+namespace Venda
 {
-    internal class ListaDeCompras
+    internal class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            List<string> listaDeCompra = new List<string>();
-            Console.Write(":::::::: Programa de lista de Compras :::::::::");
-            while (true)
-            {
-                Console.WriteLine("Digite um item para para adivionar á lista (ou 'parar' sair ): ");
-                string item = Console.ReadLine();
-                if (item.ToLower() == "parar")
-                {
-                    break;
-                }
-                listaDeCompra.Add(item);
-                Console.WriteLine("Item adicionado com sucesso!");
-            }
+            Cliente cliente = new Cliente();
+            cliente.IdCliente = 1;
+            cliente.Produto = "carro";
+            cliente.Quantidade = 2;
 
-            Console.Write("-----sua lista de Compras -----");
-            //imprimir a lista ,porem estaja o texto "lista está vazia",
-            //caso contrario i,primir todo os tens na tela
+            Produto produto = new Produto();
+            produto.Preco = 3;
 
-            if (listaDeCompra.Count == 0)
-            {
-                Console.WriteLine("lista esta está vazia");
-            }
-            else
-            {
-                foreach (string lista in listaDeCompra)
-                {
+            Venda venda = new Venda(cliente, produto);
+            venda.Id = 1;
+            double valorTotal = venda.ValorTotal;
 
-                    Console.WriteLine(lista);
-                }
-            }
+            Console.WriteLine($"o cliente comprou o produto {cliente.Produto} com o valor de {produto.Preco:c} \n" +
+                $"totalizando um valor de {valorTotal:c}");
         }
-        
     }
 }

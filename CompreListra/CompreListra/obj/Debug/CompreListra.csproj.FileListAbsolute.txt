@@ -6,3 +6,11 @@ C:\Users\matheus.honascimento\source\repos\CompreListra\CompreListra\obj\Debug\C
 C:\Users\matheus.honascimento\source\repos\CompreListra\CompreListra\obj\Debug\CompreListra.csproj.CoreCompileInputs.cache
 C:\Users\matheus.honascimento\source\repos\CompreListra\CompreListra\obj\Debug\CompreListra.exe
 C:\Users\matheus.honascimento\source\repos\CompreListra\CompreListra\obj\Debug\CompreListra.pdb
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\CompreListra\CompreListra\bin\Debug\CompreListra.exe.config
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\CompreListra\CompreListra\bin\Debug\CompreListra.exe
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\CompreListra\CompreListra\bin\Debug\CompreListra.pdb
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\CompreListra\CompreListra\obj\Debug\CompreListra.csproj.AssemblyReference.cache
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\CompreListra\CompreListra\obj\Debug\CompreListra.csproj.SuggestedBindingRedirects.cache
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\CompreListra\CompreListra\obj\Debug\CompreListra.csproj.CoreCompileInputs.cache
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\CompreListra\CompreListra\obj\Debug\CompreListra.exe
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\CompreListra\CompreListra\obj\Debug\CompreListra.pdb
