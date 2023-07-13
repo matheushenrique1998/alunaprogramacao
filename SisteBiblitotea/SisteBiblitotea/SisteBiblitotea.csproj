@@ -52,19 +52,19 @@
     <Compile Include="FrmCadastroLivro.Designer.cs">
       <DependentUpon>FrmCadastroLivro.cs</DependentUpon>
     </Compile>
-    <Compile Include="FmCadasrroAluno.cs">
+    <Compile Include="FmCadastroAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FmCadasrroAluno.Designer.cs">
-      <DependentUpon>FmCadasrroAluno.cs</DependentUpon>
+    <Compile Include="FmCadastroAluno.Designer.cs">
+      <DependentUpon>FmCadastroAluno.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmCadastroLivro.resx">
       <DependentUpon>FrmCadastroLivro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FmCadasrroAluno.resx">
-      <DependentUpon>FmCadasrroAluno.cs</DependentUpon>
+    <EmbeddedResource Include="FmCadastroAluno.resx">
+      <DependentUpon>FmCadastroAluno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

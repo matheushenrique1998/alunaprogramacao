@@ -35,18 +35,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtemail = new System.Windows.Forms.TextBox();
-            this.txtdatanascimento = new System.Windows.Forms.TextBox();
-            this.texttefefone = new System.Windows.Forms.TextBox();
-            this.textcelular = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnadicionar = new System.Windows.Forms.Button();
+            this.btnatualizar = new System.Windows.Forms.Button();
+            this.btnexexecluir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textpesquisar = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnpesquisar = new System.Windows.Forms.Button();
             this.dgvalunos = new System.Windows.Forms.DataGridView();
+            this.txtdatanascimento = new System.Windows.Forms.MaskedTextBox();
+            this.txtcpf = new System.Windows.Forms.MaskedTextBox();
+            this.txttelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtcelular = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvalunos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,7 +92,6 @@
             this.label4.Size = new System.Drawing.Size(143, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "data de nascimento";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -122,16 +121,7 @@
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(206, 26);
             this.txtnome.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(487, 24);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(202, 26);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtnome.TextChanged += new System.EventHandler(this.txtnome_TextChanged);
             // 
             // txtemail
             // 
@@ -141,64 +131,38 @@
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(181, 26);
             this.txtemail.TabIndex = 8;
-            this.txtemail.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // txtdatanascimento
+            // btnadicionar
             // 
-            this.txtdatanascimento.Location = new System.Drawing.Point(487, 89);
-            this.txtdatanascimento.Margin = new System.Windows.Forms.Padding(4);
-            this.txtdatanascimento.Name = "txtdatanascimento";
-            this.txtdatanascimento.Size = new System.Drawing.Size(202, 22);
-            this.txtdatanascimento.TabIndex = 9;
-            this.txtdatanascimento.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.btnadicionar.Location = new System.Drawing.Point(16, 234);
+            this.btnadicionar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnadicionar.Name = "btnadicionar";
+            this.btnadicionar.Size = new System.Drawing.Size(112, 39);
+            this.btnadicionar.TabIndex = 13;
+            this.btnadicionar.Text = "adicionar";
+            this.btnadicionar.UseVisualStyleBackColor = true;
+            this.btnadicionar.Click += new System.EventHandler(this.btnadicionar_Click);
             // 
-            // texttefefone
+            // btnatualizar
             // 
-            this.texttefefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texttefefone.Location = new System.Drawing.Point(84, 152);
-            this.texttefefone.Margin = new System.Windows.Forms.Padding(4);
-            this.texttefefone.Name = "texttefefone";
-            this.texttefefone.Size = new System.Drawing.Size(222, 26);
-            this.texttefefone.TabIndex = 11;
+            this.btnatualizar.Location = new System.Drawing.Point(136, 234);
+            this.btnatualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnatualizar.Name = "btnatualizar";
+            this.btnatualizar.Size = new System.Drawing.Size(112, 39);
+            this.btnatualizar.TabIndex = 14;
+            this.btnatualizar.Text = "atualizar";
+            this.btnatualizar.UseVisualStyleBackColor = true;
+            this.btnatualizar.Click += new System.EventHandler(this.btnatualizar_Click);
             // 
-            // textcelular
+            // btnexexecluir
             // 
-            this.textcelular.Location = new System.Drawing.Point(472, 158);
-            this.textcelular.Margin = new System.Windows.Forms.Padding(4);
-            this.textcelular.Name = "textcelular";
-            this.textcelular.Size = new System.Drawing.Size(217, 22);
-            this.textcelular.TabIndex = 12;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(16, 234);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 39);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "adicionar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(136, 234);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 39);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "atualizar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(268, 234);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 39);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "execluir";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnexexecluir.Location = new System.Drawing.Point(268, 234);
+            this.btnexexecluir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnexexecluir.Name = "btnexexecluir";
+            this.btnexexecluir.Size = new System.Drawing.Size(112, 39);
+            this.btnexexecluir.TabIndex = 15;
+            this.btnexexecluir.Text = "execluir";
+            this.btnexexecluir.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -218,15 +182,15 @@
             this.textpesquisar.Size = new System.Drawing.Size(158, 22);
             this.textpesquisar.TabIndex = 17;
             // 
-            // button4
+            // btnpesquisar
             // 
-            this.button4.Location = new System.Drawing.Point(649, 240);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(112, 39);
-            this.button4.TabIndex = 18;
-            this.button4.Text = "pesquisar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnpesquisar.Location = new System.Drawing.Point(649, 240);
+            this.btnpesquisar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnpesquisar.Name = "btnpesquisar";
+            this.btnpesquisar.Size = new System.Drawing.Size(112, 39);
+            this.btnpesquisar.TabIndex = 18;
+            this.btnpesquisar.Text = "pesquisar";
+            this.btnpesquisar.UseVisualStyleBackColor = true;
             // 
             // dgvalunos
             // 
@@ -236,25 +200,61 @@
             this.dgvalunos.Name = "dgvalunos";
             this.dgvalunos.Size = new System.Drawing.Size(671, 227);
             this.dgvalunos.TabIndex = 19;
-            this.dgvalunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // txtdatanascimento
+            // 
+            this.txtdatanascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdatanascimento.Location = new System.Drawing.Point(501, 92);
+            this.txtdatanascimento.Mask = "00/00/0000";
+            this.txtdatanascimento.Name = "txtdatanascimento";
+            this.txtdatanascimento.Size = new System.Drawing.Size(188, 26);
+            this.txtdatanascimento.TabIndex = 20;
+            this.txtdatanascimento.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtcpf
+            // 
+            this.txtcpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcpf.Location = new System.Drawing.Point(501, 30);
+            this.txtcpf.Mask = "000\\.000\\.000-00";
+            this.txtcpf.Name = "txtcpf";
+            this.txtcpf.Size = new System.Drawing.Size(166, 26);
+            this.txtcpf.TabIndex = 21;
+            // 
+            // txttelefone
+            // 
+            this.txttelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttelefone.Location = new System.Drawing.Point(120, 147);
+            this.txttelefone.Mask = "(00) 0000-0000";
+            this.txttelefone.Name = "txttelefone";
+            this.txttelefone.Size = new System.Drawing.Size(170, 26);
+            this.txttelefone.TabIndex = 22;
+            // 
+            // txtcelular
+            // 
+            this.txtcelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcelular.Location = new System.Drawing.Point(438, 162);
+            this.txtcelular.Mask = "(00) 00000-0000";
+            this.txtcelular.Name = "txtcelular";
+            this.txtcelular.Size = new System.Drawing.Size(170, 26);
+            this.txtcelular.TabIndex = 23;
             // 
             // FmCadastroAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 554);
+            this.Controls.Add(this.txtcelular);
+            this.Controls.Add(this.txttelefone);
+            this.Controls.Add(this.txtcpf);
+            this.Controls.Add(this.txtdatanascimento);
             this.Controls.Add(this.dgvalunos);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnpesquisar);
             this.Controls.Add(this.textpesquisar);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textcelular);
-            this.Controls.Add(this.texttefefone);
-            this.Controls.Add(this.txtdatanascimento);
+            this.Controls.Add(this.btnexexecluir);
+            this.Controls.Add(this.btnatualizar);
+            this.Controls.Add(this.btnadicionar);
             this.Controls.Add(this.txtemail);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.txtnome);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -282,18 +282,18 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtnome;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox txtemail;
-        private System.Windows.Forms.TextBox txtdatanascimento;
-        private System.Windows.Forms.TextBox texttefefone;
-        private System.Windows.Forms.TextBox textcelular;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnadicionar;
+        private System.Windows.Forms.Button btnatualizar;
+        private System.Windows.Forms.Button btnexexecluir;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textpesquisar;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnpesquisar;
         private System.Windows.Forms.DataGridView dgvalunos;
+        private System.Windows.Forms.MaskedTextBox txtdatanascimento;
+        private System.Windows.Forms.MaskedTextBox txtcpf;
+        private System.Windows.Forms.MaskedTextBox txttelefone;
+        private System.Windows.Forms.MaskedTextBox txtcelular;
     }
 }
 

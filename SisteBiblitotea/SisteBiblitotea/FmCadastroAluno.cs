@@ -14,7 +14,7 @@ using System.Windows.Forms;
 namespace SisteBiblitotea
 {
     public partial class FmCadastroAluno : Form
-
+        
     {
         public string conexaostring;
         private SqlConnection conexaoDB;
@@ -32,22 +32,22 @@ namespace SisteBiblitotea
         private void FmCadasrroAluno_Load(object sender, EventArgs e)
         {
             carregarDadosAluno();
-
+            
         }
-        private void carregarDadosAluno()
+        private void carregarDadosAluno() 
         {
             try
             {
                 conexaoDB.Open();
                 string SqL = "SELECT * FROM Aluno";
                 SqlDataAdapter adapter = new SqlDataAdapter(SqL, conexaoDB);
-                DataTable dataTable = new DataTable();
+                DataTable  dataTable = new DataTable();
                 adapter.Fill(dataTable);
-                dgvalunos.DataSource = dataTable;
+                dgvalunos.DataSource= dataTable;
 
                 conexaoDB.Close();
             }
-            catch (SqlException ex)
+            catch(SqlException ex)
             {
                 MessageBox.Show("Erro ao carregar os dados:" + ex);
 
@@ -57,7 +57,7 @@ namespace SisteBiblitotea
 
         private void btnatualizar_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void txtnome_TextChanged(object sender, EventArgs e)
@@ -69,14 +69,14 @@ namespace SisteBiblitotea
         {
             try
             {
-                String SqL = "INSERT INTO  Aluno(titulo,numeropangina,preco,ano_publicaçao,isbn,autor) VALUES(@titulo,@numeropangina,@preco,@ano_publicaçao,@isbn,@autor);
+                String SqL = "INSERT INTO  Aluno(nome,cpf,email,telefone,celular,data_nascimento) VALUES(@nome,@cpf,@email,@telefone,@celular,@data_nascimento)";
                 conexaoDB.Open();
                 SqlCommand sqLCmd = new SqlCommand(SqL, conexaoDB);
 
 
 
 
-                sqLCmd.Parameters.AddWithValue("@titulo", txtt.Text);
+                sqLCmd.Parameters.AddWithValue("@nome", txtnome.Text);
 
                 sqLCmd.Parameters.AddWithValue("@cpf", txtcpf.Text);
 
