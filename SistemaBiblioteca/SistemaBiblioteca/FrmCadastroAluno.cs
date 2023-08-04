@@ -211,7 +211,7 @@ namespace SistemaBiblioteca
                     try
                         {
                             int id = Convert.ToInt32(registroSelecionado.Cells["id"].Value.ToString());
-                            string sql = "DELETE FROM alunos  " +
+                            string sql = "DELETE FROM livros  " +
                              "WHERE id=@id ";
 
                             conexaoDB.Open();

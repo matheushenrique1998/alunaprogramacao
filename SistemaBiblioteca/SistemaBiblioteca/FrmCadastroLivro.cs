@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -13,21 +14,21 @@ namespace SistemaBiblioteca
 {
     public partial class FrmCadastroLivro : Form
     {
-       
-        
+
+
         public string conexaoString;
         private SqlConnection conexaoDB;
         DataGridViewRow registroSelecionado;
+
         public FrmCadastroLivro()
 
 
         {
             InitializeComponent();
-
-            //String de conexão
             conexaoString = "Data Source=MAR0625651W10-1;Initial Catalog=Biblioteca;Integrated Security=True";
 
-            //Inicializando a conexão com o Banco de dados
+
+
             conexaoDB = new SqlConnection(conexaoString);
         }
 
@@ -36,6 +37,8 @@ namespace SistemaBiblioteca
         private void FrmCadastroLIVRO_Load(object sender, EventArgs e)
         {
 
+            btnExcluir.Enabled = false;
+            btnAtualizar.Enabled = false;
             btnExcluir.Enabled = false;
             btnAtualizar.Enabled = false;
 
@@ -78,13 +81,12 @@ namespace SistemaBiblioteca
                 DataTable dataTable = new DataTable();
                 adpater.Fill(dataTable);
 
-                dataTable.Columns["id"].ColumnName = "ID";
+
                 dataTable.Columns["titulo"].ColumnName = "Titulo";
                 dataTable.Columns["numeropagina"].ColumnName = "NumeroPagina";
                 dataTable.Columns["preco"].ColumnName = "Preco";
                 dataTable.Columns["anopublicacao"].ColumnName = "AnoPublicacao";
-                dataTable.Columns["isbn"].ColumnName = "ISBN";
-                dataTable.Columns["autor"].ColumnName = "Autor";
+
 
 
                 dgvLivro.DataSource = dataTable;
@@ -111,10 +113,10 @@ namespace SistemaBiblioteca
                 SqlCommand sqlCmd = new SqlCommand(sql, conexaoDB);
 
                 sqlCmd.Parameters.AddWithValue("@titulo", txtTitulo.Text);
-                sqlCmd.Parameters.AddWithValue("@NumeroPagina",Convert.ToInt32( txtNumeroPagina.Text));
-                sqlCmd.Parameters.AddWithValue("@Preco", Convert.ToInt32(txtPreco.Text));
+                sqlCmd.Parameters.AddWithValue("@NumeroPagina", Convert.ToInt32(txtNumeroPagina.Text));
+                sqlCmd.Parameters.AddWithValue("@Preco", Convert.ToDecimal(txtPreco.Text));
                 sqlCmd.Parameters.AddWithValue("@AnoPublicacao", Convert.ToInt32(txtAnoPublicacao.Text));
-                sqlCmd.Parameters.AddWithValue("@ISBN", Convert.ToInt32(txtISBN.Text));
+                sqlCmd.Parameters.AddWithValue("@ISBN", txtISBN.Text);
                 sqlCmd.Parameters.AddWithValue("@Autor", txtAutor.Text);
 
 
@@ -170,9 +172,10 @@ namespace SistemaBiblioteca
             }
 
 
+
         }
 
-       
+    }
 
     }
-}
+
