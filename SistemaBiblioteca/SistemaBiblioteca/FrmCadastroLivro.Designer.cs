@@ -79,7 +79,7 @@
             this.btnAtualizar.TabIndex = 38;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            
             // 
             // dgvLivro
             // 
@@ -118,6 +118,7 @@
             this.btnAdicionar.TabIndex = 34;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // txtPreco
             // 
@@ -126,7 +127,7 @@
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(148, 26);
             this.txtPreco.TabIndex = 33;
-            this.txtPreco.TextChanged += new System.EventHandler(this.txtCelular_TextChanged);
+           
             // 
             // label6
             // 
@@ -137,7 +138,7 @@
             this.label6.Size = new System.Drawing.Size(43, 16);
             this.label6.TabIndex = 32;
             this.label6.Text = "Preço";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+           
             // 
             // txtAutor
             // 
@@ -174,8 +175,7 @@
             this.label4.Size = new System.Drawing.Size(120, 16);
             this.label4.TabIndex = 28;
             this.label4.Text = "Número de Página";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
+           
             // txtTitulo
             // 
             this.txtTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -201,7 +201,7 @@
             this.txtNumeroPagina.Name = "txtNumeroPagina";
             this.txtNumeroPagina.Size = new System.Drawing.Size(94, 26);
             this.txtNumeroPagina.TabIndex = 25;
-            this.txtNumeroPagina.TextChanged += new System.EventHandler(this.txtCPF_TextChanged);
+            
             // 
             // label2
             // 
