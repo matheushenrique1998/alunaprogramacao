@@ -44,9 +44,9 @@
             this.txtNumeroPagina = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtAnoPublicacao = new System.Windows.Forms.MaskedTextBox();
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.txtISBN = new System.Windows.Forms.TextBox();
+            this.txtAnoPublicacao = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,6 +92,7 @@
             this.dgvLivro.Size = new System.Drawing.Size(714, 168);
             this.dgvLivro.TabIndex = 37;
             this.dgvLivro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLivro_CellContentClick);
+            this.dgvLivro.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvLivro_CellMouseDoubleClick_1);
             // 
             // txtPesquisar
             // 
@@ -206,15 +207,6 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "ISBN";
             // 
-            // txtAnoPublicacao
-            // 
-            this.txtAnoPublicacao.Location = new System.Drawing.Point(635, 17);
-            this.txtAnoPublicacao.Mask = "00/00/0000";
-            this.txtAnoPublicacao.Name = "txtAnoPublicacao";
-            this.txtAnoPublicacao.Size = new System.Drawing.Size(100, 20);
-            this.txtAnoPublicacao.TabIndex = 42;
-            this.txtAnoPublicacao.ValidatingType = typeof(System.DateTime);
-            // 
             // txtPreco
             // 
             this.txtPreco.Location = new System.Drawing.Point(85, 154);
@@ -229,14 +221,21 @@
             this.txtISBN.Size = new System.Drawing.Size(297, 20);
             this.txtISBN.TabIndex = 45;
             // 
+            // txtAnoPublicacao
+            // 
+            this.txtAnoPublicacao.Location = new System.Drawing.Point(639, 19);
+            this.txtAnoPublicacao.Name = "txtAnoPublicacao";
+            this.txtAnoPublicacao.Size = new System.Drawing.Size(100, 20);
+            this.txtAnoPublicacao.TabIndex = 46;
+            // 
             // FrmCadastroLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 450);
+            this.Controls.Add(this.txtAnoPublicacao);
             this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.txtPreco);
-            this.Controls.Add(this.txtAnoPublicacao);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAtualizar);
@@ -255,6 +254,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmCadastroLivro";
             this.Text = "Cadastro de Livro";
+            this.Load += new System.EventHandler(this.FrmCadastroLivro_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -279,8 +279,8 @@
         private System.Windows.Forms.TextBox txtNumeroPagina;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox txtAnoPublicacao;
         private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.TextBox txtISBN;
+        private System.Windows.Forms.TextBox txtAnoPublicacao;
     }
 }

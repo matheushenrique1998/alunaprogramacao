@@ -43,10 +43,10 @@
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.txtDataNascimento = new System.Windows.Forms.MaskedTextBox();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtCelular = new System.Windows.Forms.MaskedTextBox();
+            this.txtDataNascimento = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -203,17 +203,6 @@
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
-            // txtDataNascimento
-            // 
-            this.txtDataNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataNascimento.Location = new System.Drawing.Point(556, 71);
-            this.txtDataNascimento.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDataNascimento.Mask = "00/00/0000";
-            this.txtDataNascimento.Name = "txtDataNascimento";
-            this.txtDataNascimento.Size = new System.Drawing.Size(175, 26);
-            this.txtDataNascimento.TabIndex = 22;
-            this.txtDataNascimento.ValidatingType = typeof(System.DateTime);
-            // 
             // txtCPF
             // 
             this.txtCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -244,15 +233,22 @@
             this.txtCelular.Size = new System.Drawing.Size(179, 26);
             this.txtCelular.TabIndex = 25;
             // 
+            // txtDataNascimento
+            // 
+            this.txtDataNascimento.Location = new System.Drawing.Point(565, 71);
+            this.txtDataNascimento.Name = "txtDataNascimento";
+            this.txtDataNascimento.Size = new System.Drawing.Size(147, 20);
+            this.txtDataNascimento.TabIndex = 26;
+            // 
             // FrmCadastroAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(755, 454);
+            this.Controls.Add(this.txtDataNascimento);
             this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.txtCPF);
-            this.Controls.Add(this.txtDataNascimento);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAtualizar);
@@ -294,10 +290,10 @@
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.MaskedTextBox txtDataNascimento;
         private System.Windows.Forms.MaskedTextBox txtCPF;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.MaskedTextBox txtCelular;
+        private System.Windows.Forms.TextBox txtDataNascimento;
     }
 }
 

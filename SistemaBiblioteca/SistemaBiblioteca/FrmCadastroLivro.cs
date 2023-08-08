@@ -143,25 +143,7 @@ namespace SistemaBiblioteca
 
         private void dgvLivro_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                linhaSelecionada = dgvLivro.Rows[e.RowIndex];
-
-
-
-                txtISBN.Text = linhaSelecionada.Cells["isbn"].Value.ToString();
-                txtTitulo.Text = linhaSelecionada.Cells["titulo"].Value.ToString();
-                txtPreco.Text = linhaSelecionada.Cells["Preço"].Value.ToString();
-                txtAnoPublicacao.Text = linhaSelecionada.Cells["Ano publicação"].Value.ToString();
-                txtNumeroPagina.Text = linhaSelecionada.Cells["N° Página"].Value.ToString();
-                txtAutor.Text = linhaSelecionada.Cells["autor"].Value.ToString();
-
-
-
-                btnAdicionar.Enabled = false;
-                btnAtualizar.Enabled = true;
-                btnExcluir.Enabled = true;
-            }
+           
         }
 
 
@@ -387,6 +369,34 @@ namespace SistemaBiblioteca
         private void dgvLivro_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void FrmCadastroLivro_Load_1(object sender, EventArgs e)
+        {
+            carregarDadosLivros();
+        }
+
+        private void dgvLivro_CellMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                linhaSelecionada = dgvLivro.Rows[e.RowIndex];
+
+
+
+                txtISBN.Text = linhaSelecionada.Cells["isbn"].Value.ToString();
+                txtTitulo.Text = linhaSelecionada.Cells["titulo"].Value.ToString();
+                txtPreco.Text = linhaSelecionada.Cells["Preço"].Value.ToString();
+                txtAnoPublicacao.Text = linhaSelecionada.Cells["Ano publicação"].Value.ToString();
+                txtNumeroPagina.Text = linhaSelecionada.Cells["N° Página"].Value.ToString();
+                txtAutor.Text = linhaSelecionada.Cells["autor"].Value.ToString();
+
+
+
+                btnAdicionar.Enabled = false;
+                btnAtualizar.Enabled = true;
+                btnExcluir.Enabled = true;
+            }
         }
     }
 }
