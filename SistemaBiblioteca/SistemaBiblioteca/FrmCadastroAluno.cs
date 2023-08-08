@@ -263,6 +263,11 @@ namespace SistemaBiblioteca
         {
             carregarDadosAlunos();
         }
+
+        private void dgvAlunos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     }
     

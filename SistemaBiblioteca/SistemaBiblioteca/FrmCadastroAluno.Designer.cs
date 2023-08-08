@@ -167,6 +167,7 @@
             this.dgvAlunos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAlunos.Size = new System.Drawing.Size(714, 200);
             this.dgvAlunos.TabIndex = 18;
+            this.dgvAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlunos_CellContentClick);
             this.dgvAlunos.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAlunos_CellMouseDoubleClick);
             // 
             // btnAtualizar

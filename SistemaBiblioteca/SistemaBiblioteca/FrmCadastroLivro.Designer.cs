@@ -44,9 +44,9 @@
             this.txtNumeroPagina = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtISBN = new System.Windows.Forms.MaskedTextBox();
             this.txtAnoPublicacao = new System.Windows.Forms.MaskedTextBox();
-            this.txtPreco = new System.Windows.Forms.MaskedTextBox();
+            this.txtPreco = new System.Windows.Forms.TextBox();
+            this.txtISBN = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +69,7 @@
             this.btnExcluir.TabIndex = 39;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAtualizar
             // 
@@ -79,6 +80,7 @@
             this.btnAtualizar.TabIndex = 38;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click_1);
             // 
             // dgvLivro
             // 
@@ -89,6 +91,7 @@
             this.dgvLivro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLivro.Size = new System.Drawing.Size(714, 168);
             this.dgvLivro.TabIndex = 37;
+            this.dgvLivro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLivro_CellContentClick);
             // 
             // txtPesquisar
             // 
@@ -203,14 +206,6 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "ISBN";
             // 
-            // txtISBN
-            // 
-            this.txtISBN.Location = new System.Drawing.Point(104, 20);
-            this.txtISBN.Mask = "00000-9999";
-            this.txtISBN.Name = "txtISBN";
-            this.txtISBN.Size = new System.Drawing.Size(329, 20);
-            this.txtISBN.TabIndex = 41;
-            // 
             // txtAnoPublicacao
             // 
             this.txtAnoPublicacao.Location = new System.Drawing.Point(635, 17);
@@ -222,20 +217,26 @@
             // 
             // txtPreco
             // 
-            this.txtPreco.Location = new System.Drawing.Point(104, 156);
-            this.txtPreco.Mask = "00|.00";
+            this.txtPreco.Location = new System.Drawing.Point(85, 154);
             this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(100, 20);
-            this.txtPreco.TabIndex = 43;
+            this.txtPreco.Size = new System.Drawing.Size(198, 20);
+            this.txtPreco.TabIndex = 44;
+            // 
+            // txtISBN
+            // 
+            this.txtISBN.Location = new System.Drawing.Point(112, 20);
+            this.txtISBN.Name = "txtISBN";
+            this.txtISBN.Size = new System.Drawing.Size(297, 20);
+            this.txtISBN.TabIndex = 45;
             // 
             // FrmCadastroLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 450);
+            this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.txtAnoPublicacao);
-            this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAtualizar);
@@ -278,8 +279,8 @@
         private System.Windows.Forms.TextBox txtNumeroPagina;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox txtISBN;
         private System.Windows.Forms.MaskedTextBox txtAnoPublicacao;
-        private System.Windows.Forms.MaskedTextBox txtPreco;
+        private System.Windows.Forms.TextBox txtPreco;
+        private System.Windows.Forms.TextBox txtISBN;
     }
 }

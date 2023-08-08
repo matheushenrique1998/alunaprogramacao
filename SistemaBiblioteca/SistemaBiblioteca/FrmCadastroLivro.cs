@@ -2,27 +2,25 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Common;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+
+
 
 namespace SistemaBiblioteca
 {
     public partial class FrmCadastroLivro : Form
     {
-
-
         public string conexaoString;
         private SqlConnection conexaoDB;
-        DataGridViewRow registroSelecionado;
-
+        DataGridViewRow linhaSelecionada;
         public FrmCadastroLivro()
-
-
         {
             InitializeComponent();
             conexaoString = "Data Source=MAR0625651W10-1;Initial Catalog=Biblioteca;Integrated Security=True";
@@ -34,65 +32,104 @@ namespace SistemaBiblioteca
 
 
 
-        private void FrmCadastroLIVRO_Load(object sender, EventArgs e)
-        {
 
-            btnExcluir.Enabled = false;
-            btnAtualizar.Enabled = false;
-            btnExcluir.Enabled = false;
-            btnAtualizar.Enabled = false;
-
-            txtISBN.TabIndex = 0;
-            txtAnoPublicacao.TabIndex = 1;
-            txtTitulo.TabIndex = 2;
-            txtAutor.TabIndex = 3;
-            txtPreco.TabIndex = 4;
-            txtNumeroPagina.TabIndex = 5;
-            btnAdicionar.TabIndex = 6;
-            btnAtualizar.TabIndex = 7;
-            btnExcluir.TabIndex = 8;
-            txtPesquisar.TabIndex = 9;
-            btnPesquisar.TabIndex = 10;
-            dgvLivro.TabIndex = 11;
-            carregarDadosLivro();
-
-        }
-        private void carregarDadosLivro(int id = 0)
+        private void carregarDadosLivros(int id = 0)
         {
             try
             {
+                string sql = "select * FROM Livros";
+
+
+
                 conexaoDB.Open();
-                string sql;
+
+
+
                 if (id == 0)
                 {
-
-                    sql = "SELECT * FROM livros";
+                    sql = "SELECT * FROM Livros";
                 }
                 else
                 {
-                    sql = "SELECT * FROM livros WHERE id=" + id;
-
+                    sql = "SELECT * FROM Livros WHERE id=" + id;
                 }
 
 
 
-
-                SqlDataAdapter adpater = new SqlDataAdapter(sql, conexaoDB);
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, conexaoDB);
                 DataTable dataTable = new DataTable();
-                adpater.Fill(dataTable);
+                adapter.Fill(dataTable);
 
 
-                dataTable.Columns["titulo"].ColumnName = "Titulo";
-                dataTable.Columns["numeropagina"].ColumnName = "NumeroPagina";
-                dataTable.Columns["preco"].ColumnName = "Preco";
-                dataTable.Columns["anopublicacao"].ColumnName = "AnoPublicacao";
+
+                dataTable.Columns["numeropagina"].ColumnName = "N° Pagina";
+                dataTable.Columns["preco"].ColumnName = "Preço";
+                dataTable.Columns["anopublicacao"].ColumnName = "Ano publicacao";
 
 
 
                 dgvLivro.DataSource = dataTable;
 
 
+
                 conexaoDB.Close();
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar os dados: " + ex);
+            }
+
+
+
+        }
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+            try
+            {
+                string sql = "INSERT INTO livros(titulo, autor, numeropagina, preco, anopublicacao, isbn) VALUES (@titulo, @autor, @numeropagina, @preco, @anopublicacao, @isbn)";
+
+
+
+                conexaoDB.Open();
+
+
+
+                SqlCommand sqlCmd = new SqlCommand(sql, conexaoDB);
+
+
+
+                sqlCmd.Parameters.AddWithValue("@titulo", txtTitulo.Text);
+                sqlCmd.Parameters.AddWithValue("@autor", txtAutor.Text);
+                sqlCmd.Parameters.AddWithValue("@numeropagina", Convert.ToInt32(txtNumeroPagina.Text));
+                sqlCmd.Parameters.AddWithValue("@preco", Convert.ToDecimal(txtPreco.Text));
+                sqlCmd.Parameters.AddWithValue("@anopublicacao", Convert.ToInt32(txtAnoPublicacao.Text));
+                sqlCmd.Parameters.AddWithValue("@isbn", txtISBN.Text);
+
+
+
+
+                sqlCmd.ExecuteNonQuery();
+
+
+
+                MessageBox.Show("Cadastro realizado com sucesso!");
+
+
+
+                conexaoDB.Close();
+
+
+
+                carregarDadosLivros();
+
 
 
             }
@@ -102,80 +139,254 @@ namespace SistemaBiblioteca
             }
         }
 
-        private void btnAdicionar_Click(object sender, EventArgs e)
+
+
+        private void dgvLivro_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            try
+            if (e.RowIndex >= 0)
             {
-                string sql = "INSERT INTO livros (titulo,numeroPagina,Preco,anopublicacao,isbn) VALUES (@Titulo,@NumeroPagina,@preco,@AnoPublicacao,@ISBN)";
-
-                conexaoDB.Open();
-
-                SqlCommand sqlCmd = new SqlCommand(sql, conexaoDB);
-
-                sqlCmd.Parameters.AddWithValue("@titulo", txtTitulo.Text);
-                sqlCmd.Parameters.AddWithValue("@NumeroPagina", Convert.ToInt32(txtNumeroPagina.Text));
-                sqlCmd.Parameters.AddWithValue("@Preco", Convert.ToDecimal(txtPreco.Text));
-                sqlCmd.Parameters.AddWithValue("@AnoPublicacao", Convert.ToInt32(txtAnoPublicacao.Text));
-                sqlCmd.Parameters.AddWithValue("@ISBN", txtISBN.Text);
-                sqlCmd.Parameters.AddWithValue("@Autor", txtAutor.Text);
+                linhaSelecionada = dgvLivro.Rows[e.RowIndex];
 
 
 
+                txtISBN.Text = linhaSelecionada.Cells["isbn"].Value.ToString();
+                txtTitulo.Text = linhaSelecionada.Cells["titulo"].Value.ToString();
+                txtPreco.Text = linhaSelecionada.Cells["Preço"].Value.ToString();
+                txtAnoPublicacao.Text = linhaSelecionada.Cells["Ano publicação"].Value.ToString();
+                txtNumeroPagina.Text = linhaSelecionada.Cells["N° Página"].Value.ToString();
+                txtAutor.Text = linhaSelecionada.Cells["autor"].Value.ToString();
 
-                sqlCmd.ExecuteNonQuery();
 
-                MessageBox.Show("Cadastro Realizado com Sucesso!!!");
 
-                conexaoDB.Close();
-
-                carregarDadosLivro();
-
+                btnAdicionar.Enabled = false;
+                btnAtualizar.Enabled = true;
+                btnExcluir.Enabled = true;
             }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Erro ao Inserir os Dados: " + ex);
-            }
-
-
         }
+
+
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
+
+        }
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (linhaSelecionada != null)
+            {
+                DialogResult resultado = MessageBox.Show("Tem certeza que deseja exlcuir o Livro", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+
+
+                if (resultado == DialogResult.Yes)
+                {
+                    try
+                    {
+                        int id = Convert.ToInt32(linhaSelecionada.Cells["id"].Value.ToString());
+
+
+
+                        string sql = "DELETE FROM livros " +
+                                     "WHERE id=@id";
+
+
+
+                        conexaoDB.Open();
+
+
+
+                        SqlCommand sqlCmd = new SqlCommand(sql, conexaoDB);
+
+
+
+                        sqlCmd.Parameters.AddWithValue("@id", id);
+                        sqlCmd.ExecuteNonQuery();
+
+
+
+                        MessageBox.Show("livro excluido com Sucesso!!!");
+
+
+
+                        conexaoDB.Close();
+
+
+
+                        carregarDadosLivros();
+
+
+
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("Erro ao Excluir os Dados: " + ex);
+                    }
+
+
+
+
+
+                }
+            }
+        }
+
+
+
+
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            int id;
+            if (int.TryParse(txtPesquisar.Text, out id))
+            {
+                carregarDadosLivros(id);
+            }
+            else
+            {
+                MessageBox.Show("Código do Livro inválido");
+            }
+        }
+
+
+
+        private void txtPesquisar_KeyUp(object sender, KeyEventArgs e)
+        {
+            carregarDadosLivros();
+        }
+
+
+
+        private void FrmCadastroLivro_Load(object sender, EventArgs e)
+        {
+            carregarDadosLivros();
+        }
+
+
+
+        private void btnAtualizar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void btnExcluir_Click_1(object sender, EventArgs e)
+        {
             try
             {
-                string sql = "INSERT INTO  livros (titulo,numeropagina,preco,anopublicacao,isbn) VALUES (@Titulo,@NumeroPagina,@Preco,@AnoPublicacao,@ISBN)";
+                int id = Convert.ToInt32(linhaSelecionada.Cells["id"].Value.ToString());
+
+
+
+                string sql = "DELETE FROM livros" +
+                             "WHERE id=@id";
+
+
 
                 conexaoDB.Open();
 
+
+
                 SqlCommand sqlCmd = new SqlCommand(sql, conexaoDB);
 
-                sqlCmd.Parameters.AddWithValue("@Titulo", txtTitulo.Text);
-                sqlCmd.Parameters.AddWithValue("@NumeroPagina", txtNumeroPagina.Text);
-                sqlCmd.Parameters.AddWithValue("@Preco", txtPreco.Text);
-                sqlCmd.Parameters.AddWithValue("@AnoPublicacao", txtAnoPublicacao.Text);
-                sqlCmd.Parameters.AddWithValue("@ISBN", txtISBN.Text);
+
+
+                sqlCmd.Parameters.AddWithValue("@id", id);
+                sqlCmd.ExecuteNonQuery();
+
+
+
+                MessageBox.Show("Livro excluido com Sucesso!!!");
+
+
+
+                conexaoDB.Close();
+
+
+
+                carregarDadosLivros();
+
+
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro ao Excluir os Dados: " + ex);
+            }
+        }
+
+
+
+        private void btnPesquisar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Convert.ToInt32(linhaSelecionada.Cells["id"].Value.ToString());
+
+
+
+                string sql = "UPDATE livros SET " +
+
+
+
+                    "isbn = @isbn" +
+                    "titulo = @titulo," +
+                    "preco = @preco" +
+                    "anopublicacao = @anopublicacao" +
+                    "numeropagina = @numeropagina" +
+                    "autor = @autor" +
+                    "WHERE id=@id";
+                conexaoDB.Open();
+
+
+
+                SqlCommand sqlCmd = new SqlCommand(sql, conexaoDB);
+
+
+
+                sqlCmd.Parameters.AddWithValue("@id", id);
+                sqlCmd.Parameters.AddWithValue("@isbn", txtISBN.Text);
+                sqlCmd.Parameters.AddWithValue("@titulo", txtTitulo.Text);
+                sqlCmd.Parameters.AddWithValue("@preco", txtPreco.Text);
+                sqlCmd.Parameters.AddWithValue("@anopublicacao", txtAnoPublicacao.Text);
+                sqlCmd.Parameters.AddWithValue("@numeropagina", txtNumeroPagina.Text);
+                sqlCmd.Parameters.AddWithValue("@autor", txtAutor.Text);
+
+
 
 
 
                 sqlCmd.ExecuteNonQuery();
 
-                MessageBox.Show("Cadastro Realizado com Sucesso!!!");
+
+
+                MessageBox.Show("Atualização Realizada com Sucesso!!!");
+
+
 
                 conexaoDB.Close();
 
-                carregarDadosLivro();
+
+
+                carregarDadosLivros();
+
+
 
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Erro ao Inserir os Dados: " + ex);
+                MessageBox.Show("Erro ao Atualizar os Dados: " + ex);
             }
+        }
 
-
+        private void txtISBN_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
 
         }
 
-    }
+        private void dgvLivro_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
-
+}
