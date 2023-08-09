@@ -386,9 +386,9 @@ namespace SistemaBiblioteca
 
                 txtISBN.Text = linhaSelecionada.Cells["isbn"].Value.ToString();
                 txtTitulo.Text = linhaSelecionada.Cells["titulo"].Value.ToString();
-                txtPreco.Text = linhaSelecionada.Cells["Preço"].Value.ToString();
-                txtAnoPublicacao.Text = linhaSelecionada.Cells["Ano publicação"].Value.ToString();
-                txtNumeroPagina.Text = linhaSelecionada.Cells["N° Página"].Value.ToString();
+                txtPreco.Text = linhaSelecionada.Cells["preco"].Value.ToString();
+                txtAnoPublicacao.Text = linhaSelecionada.Cells["ano publicacao"].Value.ToString();
+                txtNumeroPagina.Text = linhaSelecionada.Cells["numeropagina"].Value.ToString();
                 txtAutor.Text = linhaSelecionada.Cells["autor"].Value.ToString();
 
 
@@ -397,6 +397,11 @@ namespace SistemaBiblioteca
                 btnAtualizar.Enabled = true;
                 btnExcluir.Enabled = true;
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
