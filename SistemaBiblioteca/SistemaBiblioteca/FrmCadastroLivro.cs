@@ -62,9 +62,12 @@ namespace SistemaBiblioteca
 
 
 
-                dataTable.Columns["numeropagina"].ColumnName = "N° Pagina";
-                dataTable.Columns["preco"].ColumnName = "Preço";
-                dataTable.Columns["anopublicacao"].ColumnName = "Ano publicacao";
+                dataTable.Columns["numeropagina"].ColumnName = "Namuropagina";
+                dataTable.Columns["preco"].ColumnName = "Preco";
+                dataTable.Columns["anopublicacao"].ColumnName = "Anopublicacao";
+                dataTable.Columns["titulo"].ColumnName = "titulo";
+                dataTable.Columns["isbn"].ColumnName = "isbn";
+                dataTable.Columns["autor"].ColumnName = "autor";
 
 
 
@@ -311,12 +314,12 @@ namespace SistemaBiblioteca
 
 
 
-                    "isbn = @isbn" +
-                    "titulo = @titulo," +
+                    "isbn =@isbn" +
+                    "titulo =@titulo," +
                     "preco = @preco" +
-                    "anopublicacao = @anopublicacao" +
-                    "numeropagina = @numeropagina" +
-                    "autor = @autor" +
+                    "anopublicacao =@anopublicacao" +
+                    "numeropagina =@numeropagina" +
+                    "autor =@autor" +
                     "WHERE id=@id";
                 conexaoDB.Open();
 
@@ -387,7 +390,7 @@ namespace SistemaBiblioteca
                 txtISBN.Text = linhaSelecionada.Cells["isbn"].Value.ToString();
                 txtTitulo.Text = linhaSelecionada.Cells["titulo"].Value.ToString();
                 txtPreco.Text = linhaSelecionada.Cells["preco"].Value.ToString();
-                txtAnoPublicacao.Text = linhaSelecionada.Cells["ano publicacao"].Value.ToString();
+                txtAnoPublicacao.Text = linhaSelecionada.Cells["anopublicacao"].Value.ToString();
                 txtNumeroPagina.Text = linhaSelecionada.Cells["numeropagina"].Value.ToString();
                 txtAutor.Text = linhaSelecionada.Cells["autor"].Value.ToString();
 
