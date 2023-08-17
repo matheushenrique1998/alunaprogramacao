@@ -21,7 +21,8 @@ namespace SistemaBiblioteca
         public FrmCadastroLivro()
         {
             InitializeComponent();
-            conexaoString = "Data Source=MAR0625650W10-1;Initial Catalog=Biblioteca;Integrated Security=True";
+            conexaoString = "Data Source=MAR0625651W10" +
+                "-1;Initial Catalog=Biblioteca;Integrated Security=True";
 
             conexaoDB = new SqlConnection(conexaoString);
         }

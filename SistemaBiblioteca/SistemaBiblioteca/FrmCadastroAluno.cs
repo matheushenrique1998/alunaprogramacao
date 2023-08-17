@@ -23,7 +23,7 @@ namespace SistemaBiblioteca
 
             //String de conexão
             
-            conexaoString = "Data Source=MAR0625650W10-1;Initial Catalog=Biblioteca;Integrated Security=True";
+            conexaoString = "Data Source=MAR0625651W10-1;Initial Catalog=Biblioteca;Integrated Security=True";
             
             //Inicializando a conexão com o Banco de dados
             conexaoDB = new SqlConnection(conexaoString);

@@ -24,3 +24,16 @@ C:\Users\vitor.hdduarte\source\repos\SistemaBiblioteca\SistemaBiblioteca\obj\Deb
 C:\Users\vitor.hdduarte\source\repos\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.csproj.CoreCompileInputs.cache
 C:\Users\vitor.hdduarte\source\repos\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.exe
 C:\Users\vitor.hdduarte\source\repos\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.pdb
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\SistemaBiblioteca\SistemaBiblioteca\bin\Debug\SistemaBiblioteca.exe.config
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\SistemaBiblioteca\SistemaBiblioteca\bin\Debug\SistemaBiblioteca.exe
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\SistemaBiblioteca\SistemaBiblioteca\bin\Debug\SistemaBiblioteca.pdb
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.csproj.AssemblyReference.cache
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.csproj.SuggestedBindingRedirects.cache
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.FrmCadastroAluno.resources
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.FrmCadastroLivro.resources
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.FrmPrincipal.resources
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.Properties.Resources.resources
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.csproj.GenerateResource.cache
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.csproj.CoreCompileInputs.cache
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.exe
+C:\Users\matheus.honascimento\source\repos\matheushenrique1998\alunaprogramacao\SistemaBiblioteca\SistemaBiblioteca\obj\Debug\SistemaBiblioteca.pdb
