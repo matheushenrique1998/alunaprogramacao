@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,7 +22,8 @@ namespace SistemaBiblioteca
             InitializeComponent();
 
             //String de conexão
-            conexaoString = "Data Source=MAR0625651W10-1;Initial Catalog=Biblioteca;Integrated Security=True";
+            
+            conexaoString = "Data Source=MAR0625650W10-1;Initial Catalog=Biblioteca;Integrated Security=True";
             
             //Inicializando a conexão com o Banco de dados
             conexaoDB = new SqlConnection(conexaoString);
@@ -33,43 +33,41 @@ namespace SistemaBiblioteca
 
         private void FrmCadastroAluno_Load(object sender, EventArgs e)
         {
+            
             carregarDadosAlunos();
             btnExcluir.Enabled = false;
             btnAtualizar.Enabled = false;
-            
+
             txtNome.TabIndex = 0;
             txtCPF.TabIndex = 1;
             txtEmail.TabIndex = 2;
             txtDataNascimento.TabIndex = 3;
             txtTelefone.TabIndex = 4;
-            txtCelular.TabIndex = 5;
+            txtCelular.TabIndex = 5;    
             btnAdicionar.TabIndex = 6;
             btnAtualizar.TabIndex = 7;
-            btnExcluir.TabIndex = 8;
+            btnExcluir.TabIndex = 8;    
             txtPesquisar.TabIndex = 9;
-            btnPesquisar.TabIndex=10;
+            btnPesquisar.TabIndex =10;
             dgvAlunos.TabIndex = 11;
-
         }
 
-        private void carregarDadosAlunos(int id =0)
+        private void carregarDadosAlunos(int id = 0)
         {
             try
             {
                 conexaoDB.Open();
-                string sql;
-                if(id == 0)
-                {
 
-                      sql = "SELECT * FROM alunos";
+                string sql;
+
+                if (id == 0)
+                {
+                    sql = "SELECT * FROM alunos";
                 }
                 else
                 {
-                    sql = "SELECT * FROM alunos WHERE id=" + id;
-                        
+                    sql = "SELECT * FROM alunos WHERE id="+id;
                 }
-            
-                    
                
 
                 SqlDataAdapter adpater = new SqlDataAdapter(sql, conexaoDB);
@@ -79,13 +77,11 @@ namespace SistemaBiblioteca
                 dataTable.Columns["id"].ColumnName = "ID";
                 dataTable.Columns["nome"].ColumnName = "Nome";
                 dataTable.Columns["cpf"].ColumnName = "CPF";
-                dataTable.Columns["email"].ColumnName = "Email";
-                dataTable.Columns["telefone"].ColumnName= "Telefone";
+                dataTable.Columns["telefone"].ColumnName = "Telefone";
                 dataTable.Columns["celular"].ColumnName = "Celular";
                 dataTable.Columns["data_nascimento"].ColumnName = "Data de Nascimento";
 
                 dgvAlunos.DataSource = dataTable;
-              
 
                 conexaoDB.Close();
 
@@ -106,7 +102,7 @@ namespace SistemaBiblioteca
                 conexaoDB.Open();
 
                 SqlCommand sqlCmd = new SqlCommand(sql, conexaoDB);
-  
+                               
                 sqlCmd.Parameters.AddWithValue("@nome", txtNome.Text);
                 sqlCmd.Parameters.AddWithValue("@cpf", txtCPF.Text);
                 sqlCmd.Parameters.AddWithValue("@email", txtEmail.Text);
@@ -133,11 +129,33 @@ namespace SistemaBiblioteca
 
         }
 
+        private void dgvAlunos_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >=0)
+            {
+                registroSelecionado = dgvAlunos.Rows[e.RowIndex];
+
+                txtNome.Text = registroSelecionado.Cells["nome"].Value.ToString();
+                txtCPF.Text = registroSelecionado.Cells["cpf"].Value.ToString();
+                txtEmail.Text = registroSelecionado.Cells["email"].Value.ToString();
+                txtDataNascimento.Text = registroSelecionado.Cells["Data de Nascimento"].Value.ToString();
+                txtTelefone.Text = registroSelecionado.Cells["Telefone"].Value.ToString();
+                txtCelular.Text = registroSelecionado.Cells["celular"].Value.ToString();
+
+                btnAdicionar.Enabled = false;
+                btnAtualizar.Enabled = true;
+                btnExcluir.Enabled = true;
+            }
+
+          
+        }
+
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             try
             {
                 int id = Convert.ToInt32(registroSelecionado.Cells["id"].Value.ToString());
+
                 string sql = "UPDATE alunos SET " +
                     "nome=@nome, " +
                     "cpf=@cpf, " +
@@ -145,7 +163,7 @@ namespace SistemaBiblioteca
                     "telefone=@telefone, " +
                     "celular=@celular, " +
                     "data_nascimento=@data_nascimento " +
-                    "WHERE id=@id ";
+                    "WHERE id=@id";
 
                 conexaoDB.Open();
 
@@ -165,7 +183,7 @@ namespace SistemaBiblioteca
 
                 sqlCmd.ExecuteNonQuery();
 
-                MessageBox.Show("Atulização Realizado com Sucesso!!!");
+                MessageBox.Show("Atualização Realizada com Sucesso!!!");
 
                 conexaoDB.Close();
 
@@ -174,100 +192,67 @@ namespace SistemaBiblioteca
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Erro ao Atulizar: " + ex);
+                MessageBox.Show("Erro ao Atualizar os Dados: " + ex);
             }
-        }
-
-
-        private void dgvAlunos_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-           
-            if(e.ColumnIndex >= 0) {
-
-                registroSelecionado = dgvAlunos.Rows[e.RowIndex];
-                txtNome.Text = registroSelecionado.Cells["Nome"].Value.ToString();  
-                txtCPF.Text = registroSelecionado.Cells["CPF"].Value.ToString();   
-                txtEmail.Text = registroSelecionado.Cells["Email"].Value.ToString();
-                txtDataNascimento.Text = registroSelecionado.Cells["Data de Nascimento"].Value.ToString();
-                txtTelefone.Text = registroSelecionado.Cells["Telefone"].Value.ToString();
-                txtCelular.Text = registroSelecionado.Cells["Celular"].Value.ToString();
-
-                btnAdicionar.Enabled = false;
-                btnAtualizar.Enabled = true;
-                btnExcluir.Enabled = true;
-            }
-
-
-
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (registroSelecionado != null)
+            if(registroSelecionado != null)
             {
-                DialogResult resultado = MessageBox.Show("Tem ceteza que deseja excuir", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (resultado == DialogResult.Yes)
+                DialogResult resultado = MessageBox.Show("Tem certeza que deseja exlcuir o aluno","Atenção",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if(resultado == DialogResult.Yes)
                 {
+
                     try
-                        {
-                            int id = Convert.ToInt32(registroSelecionado.Cells["id"].Value.ToString());
-                            string sql = "DELETE FROM livros  " +
-                             "WHERE id=@id ";
+                    {
+                        int id = Convert.ToInt32(registroSelecionado.Cells["id"].Value.ToString());
 
-                            conexaoDB.Open();
+                        string sql = "DELETE FROM alunos " +
+                                     "WHERE id=@id";
 
-                            SqlCommand sqlCmd = new SqlCommand(sql, conexaoDB);
+                        conexaoDB.Open();
 
-                            sqlCmd.Parameters.AddWithValue("@id", id);
+                        SqlCommand sqlCmd = new SqlCommand(sql, conexaoDB);
 
-
+                        sqlCmd.Parameters.AddWithValue("@id", id);
                         sqlCmd.ExecuteNonQuery();
 
+                        MessageBox.Show("Aluno excluido com Sucesso!!!");
 
-                            MessageBox.Show("Aluno excluido com Sucesso!!!");
+                        conexaoDB.Close();
 
-                            conexaoDB.Close();
+                        carregarDadosAlunos();
 
-                            carregarDadosAlunos();
-
-                        }
-                        catch (SqlException ex)
-                        {
-                            MessageBox.Show("Erro ao Atulizar: " + ex);
-                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("Erro ao Excluir os Dados: " + ex);
                     }
 
                 }
             }
-
-        private void txtPesquisar_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             int id;
-            if (int.TryParse(txtPesquisar.Text, out id))
+            if(int.TryParse(txtPesquisar.Text, out id))
             {
                 carregarDadosAlunos(id);
             }
             else
             {
                 MessageBox.Show("Código do aluno inválido");
-
             }
-            }
+        }
 
         private void txtPesquisar_KeyUp(object sender, KeyEventArgs e)
         {
             carregarDadosAlunos();
         }
 
-        private void dgvAlunos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
     }
-    }
-    
+}

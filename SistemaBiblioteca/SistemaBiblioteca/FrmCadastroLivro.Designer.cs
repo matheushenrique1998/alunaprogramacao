@@ -35,18 +35,18 @@
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnAdicionar = new System.Windows.Forms.Button();
+            this.txtPreco = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtAutor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtAnoPublicacao = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNumeroPagina = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtPreco = new System.Windows.Forms.TextBox();
             this.txtISBN = new System.Windows.Forms.TextBox();
-            this.txtAnoPublicacao = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +59,7 @@
             this.btnPesquisar.TabIndex = 40;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click_1);
             // 
             // btnExcluir
             // 
@@ -91,8 +92,7 @@
             this.dgvLivro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLivro.Size = new System.Drawing.Size(714, 168);
             this.dgvLivro.TabIndex = 37;
-            this.dgvLivro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLivro_CellContentClick);
-            this.dgvLivro.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvLivro_CellMouseDoubleClick_1);
+            this.dgvLivro.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvLivro_CellMouseDoubleClick);
             // 
             // txtPesquisar
             // 
@@ -101,6 +101,7 @@
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(89, 26);
             this.txtPesquisar.TabIndex = 36;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
             // label7
             // 
@@ -123,15 +124,23 @@
             this.btnAdicionar.UseVisualStyleBackColor = true;
             this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
+            // txtPreco
+            // 
+            this.txtPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreco.Location = new System.Drawing.Point(85, 154);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(148, 26);
+            this.txtPreco.TabIndex = 33;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(34, 160);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 16);
+            this.label6.Size = new System.Drawing.Size(43, 16);
             this.label6.TabIndex = 32;
-            this.label6.Text = "preco";
+            this.label6.Text = "Preço";
             // 
             // txtAutor
             // 
@@ -151,16 +160,23 @@
             this.label5.TabIndex = 30;
             this.label5.Text = "Autor";
             // 
+            // txtAnoPublicacao
+            // 
+            this.txtAnoPublicacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnoPublicacao.Location = new System.Drawing.Point(614, 15);
+            this.txtAnoPublicacao.Name = "txtAnoPublicacao";
+            this.txtAnoPublicacao.Size = new System.Drawing.Size(122, 26);
+            this.txtAnoPublicacao.TabIndex = 29;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(289, 160);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 16);
+            this.label4.Size = new System.Drawing.Size(120, 16);
             this.label4.TabIndex = 28;
-            this.label4.Text = "numero  pagina";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label4.Text = "Número de Página";
             // 
             // txtTitulo
             // 
@@ -176,9 +192,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(39, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 16);
+            this.label3.Size = new System.Drawing.Size(40, 16);
             this.label3.TabIndex = 26;
-            this.label3.Text = "título";
+            this.label3.Text = "Título";
             // 
             // txtNumeroPagina
             // 
@@ -194,9 +210,17 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(487, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 16);
+            this.label2.Size = new System.Drawing.Size(121, 16);
             this.label2.TabIndex = 24;
-            this.label2.Text = "ano de publicacao";
+            this.label2.Text = "Ano de Publicação";
+            // 
+            // txtISBN
+            // 
+            this.txtISBN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtISBN.Location = new System.Drawing.Point(85, 15);
+            this.txtISBN.Name = "txtISBN";
+            this.txtISBN.Size = new System.Drawing.Size(205, 26);
+            this.txtISBN.TabIndex = 23;
             // 
             // label1
             // 
@@ -208,35 +232,11 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "ISBN";
             // 
-            // txtPreco
-            // 
-            this.txtPreco.Location = new System.Drawing.Point(85, 154);
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(198, 20);
-            this.txtPreco.TabIndex = 44;
-            // 
-            // txtISBN
-            // 
-            this.txtISBN.Location = new System.Drawing.Point(112, 20);
-            this.txtISBN.Name = "txtISBN";
-            this.txtISBN.Size = new System.Drawing.Size(297, 20);
-            this.txtISBN.TabIndex = 45;
-            // 
-            // txtAnoPublicacao
-            // 
-            this.txtAnoPublicacao.Location = new System.Drawing.Point(639, 19);
-            this.txtAnoPublicacao.Name = "txtAnoPublicacao";
-            this.txtAnoPublicacao.Size = new System.Drawing.Size(100, 20);
-            this.txtAnoPublicacao.TabIndex = 46;
-            // 
             // FrmCadastroLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 450);
-            this.Controls.Add(this.txtAnoPublicacao);
-            this.Controls.Add(this.txtISBN);
-            this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAtualizar);
@@ -244,18 +244,21 @@
             this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnAdicionar);
+            this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtAutor);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtAnoPublicacao);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNumeroPagina);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.label1);
             this.Name = "FrmCadastroLivro";
             this.Text = "Cadastro de Livro";
-            this.Load += new System.EventHandler(this.FrmCadastroLivro_Load_1);
+            this.Load += new System.EventHandler(this.FrmCadastroLivro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -271,17 +274,17 @@
         private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnAdicionar;
+        private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtAutor;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtAnoPublicacao;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNumeroPagina;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.TextBox txtISBN;
-        private System.Windows.Forms.TextBox txtAnoPublicacao;
+        private System.Windows.Forms.Label label1;
     }
 }
