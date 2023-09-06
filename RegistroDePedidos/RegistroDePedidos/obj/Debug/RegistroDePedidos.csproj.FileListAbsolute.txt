@@ -1,0 +1,6 @@
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDePedidos\RegistroDePedidos\obj\Debug\RegistroDePedidos.csproj.AssemblyReference.cache
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDePedidos\RegistroDePedidos\obj\Debug\RegistroDePedidos.csproj.SuggestedBindingRedirects.cache
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDePedidos\RegistroDePedidos\obj\Debug\RegistroDePedidos.Properties.Resources.resources
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDePedidos\RegistroDePedidos\obj\Debug\RegistroDePedidos.FrmRegistroDePedidos.resources
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDePedidos\RegistroDePedidos\obj\Debug\RegistroDePedidos.csproj.GenerateResource.cache
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDePedidos\RegistroDePedidos\obj\Debug\RegistroDePedidos.csproj.CoreCompileInputs.cache

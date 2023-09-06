@@ -1,6 +1,6 @@
 ﻿namespace RegistroDePedidos
 {
-    partial class Form1
+    partial class FrmRegistroDePedidos
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvLivro = new System.Windows.Forms.DataGridView();
+            this.dgvRegistroDePedidos = new System.Windows.Forms.DataGridView();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.txtPedidos = new System.Windows.Forms.TextBox();
@@ -39,23 +39,25 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroDePedidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvLivro
+            // dgvRegistroDePedidos
             // 
-            this.dgvLivro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLivro.Location = new System.Drawing.Point(45, 343);
-            this.dgvLivro.Name = "dgvLivro";
-            this.dgvLivro.Size = new System.Drawing.Size(704, 109);
-            this.dgvLivro.TabIndex = 1;
+            this.dgvRegistroDePedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRegistroDePedidos.Location = new System.Drawing.Point(45, 343);
+            this.dgvRegistroDePedidos.Name = "dgvRegistroDePedidos";
+            this.dgvRegistroDePedidos.Size = new System.Drawing.Size(704, 109);
+            this.dgvRegistroDePedidos.TabIndex = 1;
+            this.dgvRegistroDePedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLivro_CellContentClick);
+            this.dgvRegistroDePedidos.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRegistroDePedidos_CellMouseDoubleClick);
             // 
             // btnAtualizar
             // 
             this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(109, 273);
+            this.btnAtualizar.Location = new System.Drawing.Point(132, 273);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(93, 40);
             this.btnAtualizar.TabIndex = 3;
@@ -65,7 +67,7 @@
             // btnExcluir
             // 
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(219, 273);
+            this.btnExcluir.Location = new System.Drawing.Point(231, 273);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(104, 41);
             this.btnExcluir.TabIndex = 4;
@@ -76,7 +78,7 @@
             // 
             this.txtPedidos.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPedidos.Location = new System.Drawing.Point(508, 272);
+            this.txtPedidos.Location = new System.Drawing.Point(556, 280);
             this.txtPedidos.Name = "txtPedidos";
             this.txtPedidos.Size = new System.Drawing.Size(100, 29);
             this.txtPedidos.TabIndex = 6;
@@ -85,7 +87,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(345, 275);
+            this.label2.Location = new System.Drawing.Point(360, 275);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 24);
             this.label2.TabIndex = 7;
@@ -99,6 +101,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(791, 61);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -112,17 +115,18 @@
             // btnAdicionar
             // 
             this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionar.Location = new System.Drawing.Point(-1, 275);
+            this.btnAdicionar.Location = new System.Drawing.Point(12, 275);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(104, 38);
             this.btnAdicionar.TabIndex = 10;
             this.btnAdicionar.Text = "adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(645, 259);
+            this.button1.Location = new System.Drawing.Point(676, 275);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 40);
             this.button1.TabIndex = 11;
@@ -153,7 +157,7 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Loja de informático 2023";
             // 
-            // Form1
+            // FrmRegistroDePedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -168,10 +172,11 @@
             this.Controls.Add(this.txtPedidos);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAtualizar);
-            this.Controls.Add(this.dgvLivro);
-            this.Name = "Form1";
+            this.Controls.Add(this.dgvRegistroDePedidos);
+            this.Name = "FrmRegistroDePedidos";
             this.Text = "RegistroDePedidos";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroDePedidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -180,7 +185,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvLivro;
+        private System.Windows.Forms.DataGridView dgvRegistroDePedidos;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.TextBox txtPedidos;
