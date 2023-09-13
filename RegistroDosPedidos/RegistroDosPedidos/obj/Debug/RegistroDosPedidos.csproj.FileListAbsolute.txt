@@ -9,3 +9,14 @@ C:\Users\matheus.honascimento\source\repos\RegistroDosPedidos\RegistroDosPedidos
 C:\Users\matheus.honascimento\source\repos\RegistroDosPedidos\RegistroDosPedidos\obj\Debug\RegistroDosPedidos.csproj.CoreCompileInputs.cache
 C:\Users\matheus.honascimento\source\repos\RegistroDosPedidos\RegistroDosPedidos\obj\Debug\RegistroDosPedidos.exe
 C:\Users\matheus.honascimento\source\repos\RegistroDosPedidos\RegistroDosPedidos\obj\Debug\RegistroDosPedidos.pdb
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDosPedidos\RegistroDosPedidos\bin\Debug\RegistroDosPedidos.exe.config
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDosPedidos\RegistroDosPedidos\bin\Debug\RegistroDosPedidos.exe
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDosPedidos\RegistroDosPedidos\bin\Debug\RegistroDosPedidos.pdb
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDosPedidos\RegistroDosPedidos\obj\Debug\RegistroDosPedidos.csproj.AssemblyReference.cache
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDosPedidos\RegistroDosPedidos\obj\Debug\RegistroDosPedidos.csproj.SuggestedBindingRedirects.cache
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDosPedidos\RegistroDosPedidos\obj\Debug\RegistroDosPedidos.Form1.resources
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDosPedidos\RegistroDosPedidos\obj\Debug\RegistroDosPedidos.Properties.Resources.resources
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDosPedidos\RegistroDosPedidos\obj\Debug\RegistroDosPedidos.csproj.GenerateResource.cache
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDosPedidos\RegistroDosPedidos\obj\Debug\RegistroDosPedidos.csproj.CoreCompileInputs.cache
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDosPedidos\RegistroDosPedidos\obj\Debug\RegistroDosPedidos.exe
+C:\Users\matheus.honascimento\source\repos\alunaprogramacao\RegistroDosPedidos\RegistroDosPedidos\obj\Debug\RegistroDosPedidos.pdb
